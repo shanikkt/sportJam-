@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Style/common.css">
+        <link rel="stylesheet" href="./Style/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b6ce22f4c8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./Style/cart.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar1"></div>
+    <div id="navbar2"></div>
+    <div id="menu_bar"></div>
+    <h2 id="total"></h2>
+    <div id="main_cart">
+        <div id="first_cart"></div>
+        <div id="second_cart">
+            <h2>PAYMENTS</h2>
+            <form id="main_form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="text" placeholder="Mobile Number" required>
+                <input type="text" placeholder="Card Number" required>
+                <input type="password" placeholder="CVV" id="cvv" required>
+                <input type="date" placeholder="Expiry Date" id="expiry" required>
+                <input type="submit" id="submit">
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script type="module">
+
+    import navbar1 from "./Script/navbar1.js";
+
+    import navbar2 from "./Script/navbar2.js";
+
+    import navbar3 from "./Script/navbar3.js"
+
+    let header1 = document.getElementById("navbar1");
+
+    header1.innerHTML = navbar1();
+
+    let header2 = document.getElementById("navbar2");
+
+    header2.innerHTML = navbar2();
+
+    let header3 = document.getElementById("menu_bar");
+
+    header3.innerHTML = navbar3();
+
+    let data = JSON.parse(localStorage.getItem("allData")) || [];
+    console.log(data);
+
+    function appendData(data){
+        let container = document.getElementById("first_cart");
+        container.innerHTML = null;
+
+        data.map(function(item,index){
+
+            let div = document.createElement("div");
+
+            let name = document.createElement("p");
+            name.textContent = item.name;
+            name.id="name";
+
+            let details = document.createElement("p");
+            details.textContent = item.details;
+            details.id = "details";
+
+            let image = document.createElement("img");
+            image.src = item.image;
+
+            let price = document.createElement("p");
+            price.textContent = "Price - "+item.price;
+            price.id = "price";
+
+
+            div.append(image,name,details,price);
+
+            container.append(div);
+
+            // document.getElementById(total).textContent = "Total Pay - "+item.price;
+
+
+        })
+    }
+    
+    appendData(data)
+
+    document.getElementById("main_form").addEventListener("submit",submitFunction)
+    function submitFunction(e){
+        e.preventDefault();
+        alert("Payment Successfull");
+        alert("Your Order will be Diliver To Your Address");
+    }
+
+
+</script>
