@@ -1,0 +1,35 @@
+
+/* main div css */
+.container{
+    width: 99%;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+    display:flex;
+}
+
+/* main div css */
+
+
+/* navbar css */
+
+.navbar{
+    width: 98%;
+    padding: 10px;
+    border: 2px solid;
+    display: flex;
+    justify-content: right;
+    background-color: rgb(34, 32, 32);
+}
+
+.navbar>div{
+    margin-right: 30px;
+
+}
+.navbar>div>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* navbar css */

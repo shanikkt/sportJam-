@@ -1,0 +1,255 @@
+*{
+    /* border: 1px solid; */
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+#navbar1{
+    display: flex;
+    width: 100%;
+    border: 1px solid;
+    justify-content: flex-end;
+    background-color: black;
+    height: fit-content;
+}
+#navbar1>a{
+    margin: 0px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+#navbar1>a>i{
+    height: fit-content;
+    margin-top: 10px;
+    font-size: 24px;
+}
+#navbar1>a>p{
+    margin:10px 30px 15px 10px;
+    font-size: 18px;
+}
+
+#navbar2{
+    display: flex;
+    width: 98%;
+    padding: 20px;
+}
+#shoppingCart>i{
+    margin-top:10px;
+    font-size: 48px;
+    margin-right: 0px;
+}
+#shoppingCart{
+    display: flex;
+    justify-content: flex-end;
+    width: 27%;
+}
+#shoppingCart>p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+
+}
+#inputDiv{
+    width: 55%;
+    border: 1px solid gray;
+    height: 50px;
+    border-radius: 10px;
+    margin:10px 10%;
+}
+#inputDiv>input{
+    width: 90%;
+    height: 90%;
+    border: 0px solid;
+    padding: 15px;
+    border-radius: 10px;
+}
+#inputDiv>i{
+    font-size: 28px;
+    margin-left: 10px;
+    margin: 5px 20px;
+    color: rgb(172, 166, 166);
+}
+.menu_bar ul{
+    display: flex;
+    list-style: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 100%;
+    height:fit-content
+}
+.menu_bar li{
+    padding:15px;
+    list-style: none;
+    font-size:18px;
+    font-weight: 300;
+}
+.menu_bar li a{
+    text-decoration:none;
+    color: black;
+    padding:15px;
+}
+.menu_bar li:hover a{
+    background-color:black;
+    color: white;
+
+}
+.submenu1{
+    display: none;
+}
+.menu_bar li:hover .submenu1{
+    display: block;
+    position: absolute;
+    margin-top:15px;
+    margin-left: 0px;
+    border: 1px solid;
+
+}
+.menu_bar li:hover .submenu1 ul{
+    display: block;
+    margin: 0px;
+    border: 0px;
+}
+.menu_bar li:hover .submenu1 ul a{
+    background-color:white;
+    color:black;
+}
+.submenu li:hover a{
+    font-size:22px;
+    font-weight:bold;
+}
+
+img{
+    width:100%;
+    height:100%;
+    z-index: -1;
+}
+
+#grid-container{
+    margin: 40px;
+    width:95%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+#grid-container>div{
+    height:100%;
+}
+
+#grid1{
+    background-size: 100% 100%;
+    background-image: url("https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/callout_img1.jpg");
+}
+#grid2{
+    background-size: 100% 100%;
+    background-image:url("https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/callout_img2.jpg")
+}
+#grid3{
+    background-size: 100% 100%;
+    background-image: url("https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/callout_img3.jpg");
+}
+
+
+.cart1{
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top:58%;
+    height: 50%;
+    background-color: rgba(255, 0, 0, 0.5);
+    display: none;
+}
+.cart1 p{
+    border: 1px solid;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+    margin-top:10px;
+
+}
+#grid-container>div:hover .cart1{
+    display: block;
+}
+.para:hover{
+    background-color: rgb(219, 217, 217);
+    color: black;
+    border: 0px;
+}
+
+.cart2{
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    margin-top:90%;
+}
+.cart2>h2{
+    margin: 0px;
+    color: white;
+}
+#grid-container>div:hover .cart2{
+    display: none;
+}
+
+#services{
+    width: 96%;
+    height: 700px;
+    margin: auto;
+}
+#services>img{
+    width: 100%;
+    height: 100%;
+}
+
+#order{
+    margin: auto;
+    width: 96%;
+    height: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+}
+#order>div{
+    height: 550px;
+    text-align: center;
+}
+#order img{
+    width: 100%;
+    height: 100%;
+}
+#order h3{
+    margin-top:20px;
+}
+#lastDiv{
+    margin-top: 50px;
+}
+
+#lastDiv img{
+    width: 100%;
+    height: 100%;
+}
+
+#footer{
+    margin:40px 0px;
+    width: 100%;
+    height:500px;
+    border: 1px solid;
+}
+#lastImage{
+
+    height: 250px;
+    width: 300px;
+    margin-left: 350px;
+}
+#home{
+    margin-right:30px;
+}
+
+#carouselExampleControls{
+    z-index: -1;
+
+}
+.submenu{
+    background-color: white;
+}
+

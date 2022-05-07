@@ -1,0 +1,60 @@
+#mainDiv{
+    
+    display: flex;
+    margin: auto;
+    width: 96%;
+    height: fit-content;
+    margin-top: 10px;
+
+}
+
+#firstDiv{
+    width: 250px;
+    height: 520px;
+}
+#secondDiv{
+    margin-left: 40px;
+    width: 87%;
+    height: fit-content;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+#firstDiv>img{
+    width: 100%;
+    height: 520px;
+}
+
+#secondDiv>div{
+    text-align: center;
+    height: 400px;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+#secondDiv>div>p{
+    margin: 5px;
+}
+#secondDiv>div>img{
+    width: 100%;
+    height: 60%;
+}
+#name{
+    margin-top: 20px;
+    font-weight: bold;
+}
+#secondDiv>div:hover{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#cartButton{
+    width: 60%;
+    padding: 5px;
+    text-align: center;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    border: 0px;
+}
+#price{
+    font-weight: bold;
+}
